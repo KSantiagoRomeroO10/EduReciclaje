@@ -1,0 +1,37 @@
+:root{
+  
+  /* Colores principales */
+  --red: #A81212;
+  --purple: #720D5D;
+
+  /* Paleta de colores oscuro */
+  --bg1: #1A1C2C;  /* Azul oscuro */
+  --bg2: #181a1b;  /* Gris Oscuro */
+  --bg3: #191B24; /* Morado Oscuro */
+  --bg4: #212425;
+  --bg5: #595959;
+  --bg6: #979797;
+  --bg7: #2C1A2C;
+
+  /* Color y tamaño de los deliniados inferiores */
+
+  --border-bottom: 2px solid var(--red)
+
+}
+
+body{
+  background: var(--bg1);
+}
+
+*{
+  color: #FFFFFF;
+}
+
+@font-face {
+  font-family: 'Monaspace Krypton Regular';
+  src: url('./Assets/Fonts/MonaspaceKrypton-Regular.woff') format('woff');
+}
+
+h1, h2, h3, p{
+  font-family: 'Monaspace Krypton Regular';
+}
