@@ -1,8 +1,12 @@
 import styles from './Button.module.css'
 
-const ButtonRoute = (NombreButton) => {
+import { NavLink } from 'react-router-dom'
+
+const ButtonRoute = ({ NombreButton, Route }) => {
   return (
-    <button>{NombreButton}</button>
+    <NavLink to={Route}>
+      <button className={styles.button}>{NombreButton}</button>
+    </NavLink>
   )
 }
 

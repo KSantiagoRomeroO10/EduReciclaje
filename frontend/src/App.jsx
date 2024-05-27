@@ -1,9 +1,9 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import './App.css'
+import './General.css'
 
 import Landing from './Components/Common/Landing/Landing'
 
-import './App.css'
-import './General.css'
+import { Routes, Route, useLocation } from 'react-router-dom'
 
 function App() {
 
