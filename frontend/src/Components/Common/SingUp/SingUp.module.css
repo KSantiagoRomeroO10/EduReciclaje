@@ -1,0 +1,62 @@
+.Form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  background: var(--bg2);
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.UserContainer, .PassContainer, .NombresContainer{
+  --c-text: rgb(252, 252, 252);
+  --c-outline: var(--purple);
+  margin: 40px auto;
+  display: grid;
+  gap: 8px;
+  position: relative;
+  width: 200px;
+}
+
+.Usuario, .Contraseña, .Nombres{
+  padding: 8px 12px;
+  border-radius: 3.2px;
+  border: 1px solid var(--c-border, currentColor);
+  color: var(--c-text);
+  font-size: 16px;
+  width: 100%;
+  background: var(--bg2);
+}
+
+.Usuario:not(:placeholder-shown) + .LabelUser, .Contraseña:not(:placeholder-shown) + .LabelContraseña,
+.Nombres:not(:placeholder-shown) + .LabelNombres{
+  transform: translateY(-220%);
+  opacity: 1;
+}
+
+.Usuario:is(:disabled, :read-only), .Contraseña:is(:disabled, :read-only), 
+.Nombres:is(:disabled, :read-only){
+  --c-border: rgb(150, 150, 150);
+  --c-text: rgb(170, 170, 170);
+}
+
+.Usuario:is(:focus, :focus-visible), .Contraseña:is(:focus, :focus-visible),
+.Nombres:is(:focus, :focus-visible){
+  outline: 2px solid var(--c-outline);
+  outline-offset: 2px;
+}
+
+.LabelUser, .LabelContraseña, .LabelNombres{
+  --timing: 250ms ease-in;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transition: transform var(--timing),
+    opacity var(--timing);
+  transform: translateY(-50%);
+  opacity: 0;
+  color: var(--c-text);
+  cursor: text;
+}
