@@ -33,12 +33,6 @@
   opacity: 1;
 }
 
-.Usuario:invalid, .Contraseña:invalid{
-  --c-border: rgb(230, 85, 60);
-  --c-text: rgb(230, 85, 60);
-  --c-outline: rgb(230, 85, 60);
-}
-
 .Usuario:is(:disabled, :read-only), .Contraseña:is(:disabled, :read-only){
   --c-border: rgb(150, 150, 150);
   --c-text: rgb(170, 170, 170);
@@ -50,7 +44,7 @@
 }
 
 .LabelUser, .LabelContraseña{
-  --timing: 200ms ease-in;
+  --timing: 250ms ease-in;
   position: absolute;
   left: 0;
   top: 50%;
