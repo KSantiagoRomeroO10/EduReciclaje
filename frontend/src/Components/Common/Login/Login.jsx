@@ -22,7 +22,7 @@ const Login = () => {
         <label class="LabelContraseña" for="Contraseña" className={styles.LabelContraseña}>Contraseña</label>
       </p>
 
-      <Button NombreButton={'Aceptar'} Route={'Home'}/>
+      <Button NombreButton={'Aceptar'} Route={'/Home'}/>
 
     </form>
   )

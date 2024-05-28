@@ -3,20 +3,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50vw;
+  width: 35vw;
   background: var(--bg2);
   text-align: center;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .UserContainer, .PassContainer{
-  --c-text: rgb(50, 50, 80);
-  --c-bg: rgb(252, 252, 252);
-  --c-outline: rgb(55, 45 , 190);
+  --c-text: rgb(252, 252, 252);
+  --c-outline: var(--purple);
+  margin: 40px auto;
   display: grid;
   gap: 8px;
   position: relative;
-  max-width: 190px;
-  color: black;
+  width: 200px;
 }
 
 .Usuario, .Contraseña{
@@ -26,6 +27,7 @@
   color: var(--c-text);
   font-size: 16px;
   width: 100%;
+  background: var(--bg2);
 }
 
 .Usuario:not(:placeholder-shown) + .LabelUser, .Contraseña:not(:placeholder-shown) + .LabelContraseña{
@@ -53,5 +55,5 @@
   transform: translateY(-50%);
   opacity: 0;
   color: var(--c-text);
-  font-weight: 500;
+  cursor: text;
 }
