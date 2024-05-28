@@ -2,6 +2,7 @@ import './App.css'
 import './General.css'
 
 import Landing from './Components/Common/Landing/Landing'
+import Login from './Components/Common/Login/Login'
 
 import { Routes, Route, useLocation } from 'react-router-dom'
 
@@ -16,6 +17,7 @@ function App() {
       } */}
       <Routes>
         <Route path='/' element={ <Landing/> }/>
+        <Route path='/Login' element={ <Login/> }/>
       </Routes>
     </>
   )
