@@ -1,4 +1,4 @@
-import styles from './Login.module.css'
+import styles from '../Styles/InputsForms.module.css'
 
 import Button from '../Button/ButtonRoute'
 
