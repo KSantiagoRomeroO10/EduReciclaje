@@ -36,11 +36,6 @@
   opacity: 1;
 }
 
-.Usuario:is(:disabled, :read-only), .Contraseña:is(:disabled, :read-only), 
-.Nombres:is(:disabled, :read-only){
-  --c-border: rgb(150, 150, 150);
-  --c-text: rgb(170, 170, 170);
-}
 
 .Usuario:is(:focus, :focus-visible), .Contraseña:is(:focus, :focus-visible),
 .Nombres:is(:focus, :focus-visible){

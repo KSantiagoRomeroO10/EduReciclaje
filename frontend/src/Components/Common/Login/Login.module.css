@@ -10,7 +10,7 @@
   border-radius: 5px;
 }
 
-.UserContainer, .PassContainer{
+.InputContainer{
   --c-text: rgb(252, 252, 252);
   --c-outline: var(--purple);
   margin: 40px auto;
@@ -20,7 +20,7 @@
   width: 200px;
 }
 
-.Usuario, .Contraseña{
+.Input{
   padding: 8px 12px;
   border-radius: 3.2px;
   border: 1px solid var(--c-border, currentColor);
@@ -30,22 +30,17 @@
   background: var(--bg2);
 }
 
-.Usuario:not(:placeholder-shown) + .LabelUser, .Contraseña:not(:placeholder-shown) + .LabelContraseña{
+.Input:not(:placeholder-shown) + .LabelInput{
   transform: translateY(-220%);
   opacity: 1;
 }
 
-.Usuario:is(:disabled, :read-only), .Contraseña:is(:disabled, :read-only){
-  --c-border: rgb(150, 150, 150);
-  --c-text: rgb(170, 170, 170);
-}
-
-.Usuario:is(:focus, :focus-visible), .Contraseña:is(:focus, :focus-visible){
+.Input:is(:focus, :focus-visible){
   outline: 2px solid var(--c-outline);
   outline-offset: 2px;
 }
 
-.LabelUser, .LabelContraseña{
+.LabelInput{
   --timing: 250ms ease-in;
   position: absolute;
   left: 0;
