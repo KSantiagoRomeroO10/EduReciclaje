@@ -1,0 +1,7 @@
+.Form{
+  width: 45vw;
+}
+.Container{
+  display: grid;
+  grid-template-columns: auto auto;
+}

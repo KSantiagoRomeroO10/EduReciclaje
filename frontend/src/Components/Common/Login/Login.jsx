@@ -1,4 +1,5 @@
 import styles from '../Styles/InputsForms.module.css'
+import styles1 from './Login.module.css'
 
 import Button from '../Button/ButtonRoute'
 
@@ -9,18 +10,18 @@ const Login = () => {
   }
 
   return(
-    <form onSubmit={HandleSubmit} className={styles.Form}>
+    <form onSubmit={HandleSubmit} className={`${styles.Form} ${styles1.Form}`}>
       <h1>Iniciar Sesión</h1>
 
-      <p className={styles.InputContainer}>  
+      <div className={styles.InputContainer}>  
         <input type="text" placeholder='Usuario o correo' className={styles.Input} id='Usuario'/>
-        <label for="Usuario" className={styles.LabelInput}>Usuario</label>
-      </p>
+        <label htmlFor="Usuario" className={styles.LabelInput}>Usuario</label>
+      </div>
 
-      <p className={styles.InputContainer}>  
+      <div className={styles.InputContainer}>  
         <input type="password" placeholder='Contraseña' className={styles.Input} id='Contraseña'/>
-        <label for="Contraseña" className={styles.LabelInput}>Contraseña</label>
-      </p>
+        <label htmlFor="Contraseña" className={styles.LabelInput}>Contraseña</label>
+      </div>
 
       <Button NombreButton={'Aceptar'} Route={'/Home'}/>
 
