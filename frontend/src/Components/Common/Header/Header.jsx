@@ -1,9 +1,10 @@
 import style from './Header.module.css'
+import Button from '../Button/ButtonRoute'
 
 const Header = () => {
   return(
-    <header>
-      
+    <header className={style.Header}>
+      <Button NombreButton={'Formularios'} Route={'/Forms'}></Button>
     </header>
   )
 } 
