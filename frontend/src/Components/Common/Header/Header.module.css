@@ -1,0 +1,41 @@
+.Header{
+  width: 100vw;
+  height: auto;
+  background-color: var(--bg2);
+}
+
+.ContainerMenu {
+  position: relative;
+  padding: 10px;
+  max-width: 150px;
+}
+
+.Menu {
+  display: none;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: var(--bg2);
+  border-radius: 3px;
+}
+
+.Menu li {
+  list-style: none;
+}
+
+.Trigger{
+  padding: 8px;
+  cursor: pointer;
+  background: var(--purple);
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.Trigger:hover + .Menu,
+.Menu:hover {
+  display: block;
+}
+
+.Border{
+  border: 2px solid white;
+}

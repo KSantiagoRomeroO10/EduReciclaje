@@ -19,19 +19,19 @@
 
 }
 
-body{
-  background: var(--bg1);
-}
-
-*{
-  color: #FFFFFF;
-}
-
 @font-face {
   font-family: 'Monaspace Krypton Regular';
   src: url('./Assets/Fonts/MonaspaceKrypton-Regular.woff') format('woff');
 }
 
-h1, h2, h3, p{
+*{
+  color: #FFFFFF;
   font-family: 'Monaspace Krypton Regular';
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body{
+  background: var(--bg1);
 }

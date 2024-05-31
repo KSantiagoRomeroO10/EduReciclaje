@@ -1,7 +1,8 @@
 import styles from '../Styles/InputsForms.module.css'
 import styles1 from './Login.module.css'
 
-import Button from '../Button/ButtonRoute'
+import ButtonRoute from '../ButtonRoute/ButtonRoute'
+import { NavLink } from 'react-router-dom'
 
 const Login = () => {
 
@@ -23,7 +24,13 @@ const Login = () => {
         <label htmlFor="Contraseña" className={styles.LabelInput}>Contraseña</label>
       </div>
 
-      <Button NombreButton={'Aceptar'} Route={'/Home'}/>
+      <ButtonRoute NombreButton={'Aceptar'} Route={'/Home'}/>
+
+      <br />
+      
+      <NavLink to={'/SingUp'}>
+        <p>Registrarse</p>
+      </NavLink>
 
     </form>
   )

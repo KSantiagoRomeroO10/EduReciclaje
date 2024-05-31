@@ -1,0 +1,22 @@
+.Button{
+  background: var(--purple);
+  border-radius: 3px;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin: 20px;
+}
+.Button:hover{
+  background: var(--red);
+}
+
+.ButtonLeft{
+  float: left;
+}
+
+
+.ButtonRight{
+  float: right;
+}

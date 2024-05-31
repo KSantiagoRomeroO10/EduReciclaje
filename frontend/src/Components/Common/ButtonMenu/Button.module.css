@@ -1,0 +1,13 @@
+.button{
+  background: var(--bg2);
+  padding: 10px;
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+  border-bottom: solid 2px transparent;
+}
+.button:hover{
+  background: var(--red);
+  border-bottom: solid 2px white;
+}

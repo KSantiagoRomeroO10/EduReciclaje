@@ -1,7 +1,7 @@
 import styles from '../Styles/InputsForms.module.css'
 import styles1 from './SingUp.module.css'
 
-import Button from '../Button/ButtonRoute'
+import ButtonRoute from '../ButtonRoute/ButtonRoute'
 
 const SingUp = () => {
 
@@ -11,7 +11,7 @@ const SingUp = () => {
 
   return (
     <form onSubmit={HandleSubmit} className={`${styles.Form} ${styles1.Form}`}>
-      <h1>Registrase</h1>
+      <h1>Registrarse</h1>
       <div className={styles1.Container}>
         <div className={styles1.Left}>
 
@@ -62,7 +62,7 @@ const SingUp = () => {
         </div>
       </div>      
 
-      <Button NombreButton={'Aceptar'} Route={'/Home'}/>
+      <ButtonRoute NombreButton={'Aceptar'} Route={'/Login'}/>
 
     </form>
   )
