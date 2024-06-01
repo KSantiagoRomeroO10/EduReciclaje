@@ -11,12 +11,16 @@
 
 .InputContainer{
   --c-text: rgb(252, 252, 252);
-  --c-outline: var(--purple);
+  --c-outline: var(--bg2);
   margin: 40px auto;
   display: grid;
   gap: 8px;
   position: relative;
   width: 200px;
+}
+
+.InputContainer input{
+  text-align: left;
 }
 
 .Input{

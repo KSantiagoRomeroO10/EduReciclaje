@@ -1,5 +1,5 @@
 .Button{
-  background: var(--purple);
+  background: var(--main);
   border-radius: 3px;
   padding: 10px;
   width: 150px;
@@ -7,9 +7,11 @@
   cursor: pointer;
   margin-bottom: 15px;
   margin: 20px;
+  border: 1px solid transparent;
 }
 .Button:hover{
-  background: var(--red);
+  background: var(--bg1);
+  border: 1px solid white;
 }
 
 .ButtonLeft{

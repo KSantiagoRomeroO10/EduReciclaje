@@ -26,9 +26,15 @@
 .Trigger{
   padding: 8px;
   cursor: pointer;
-  background: var(--purple);
+  background: var(--main);
   border-radius: 3px;
   margin: 10px;
+  border: 1px solid transparent;
+}
+
+.Trigger:hover{
+  background: var(--bg1);
+  border: 1px solid white;
 }
 
 .Trigger:hover + .Menu,
