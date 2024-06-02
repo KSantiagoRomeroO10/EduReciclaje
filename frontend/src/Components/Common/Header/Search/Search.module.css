@@ -1,0 +1,12 @@
+.SearchButton{
+  background: var(--main);
+  border-radius: 3px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.SearchButton:hover{
+  background: var(--bg1);
+  border: 1px solid white;
+}
