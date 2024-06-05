@@ -1,7 +1,7 @@
 import style from './Header.module.css'
 
-import ButtonRoute from '../ButtonRoute/ButtonRoute'
-import ButtonMenu from '../ButtonMenu/ButtonMenu'
+import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
+import ButtonMenu from '../SubComponets/ButtonMenu/ButtonMenu'
 import Search from './Search/Search'
 
 const Header = () => {

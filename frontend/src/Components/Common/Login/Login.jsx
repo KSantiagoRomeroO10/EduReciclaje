@@ -1,7 +1,7 @@
 import styles from '../Styles/InputsForms.module.css'
 import styles1 from './Login.module.css'
 
-import ButtonRoute from '../ButtonRoute/ButtonRoute'
+import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
 import { NavLink } from 'react-router-dom'
 
 const Login = () => {

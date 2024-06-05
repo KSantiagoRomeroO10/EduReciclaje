@@ -1,7 +1,7 @@
 import styles from '../Styles/InputsForms.module.css'
 import styles1 from './SingUp.module.css'
 
-import ButtonRoute from '../ButtonRoute/ButtonRoute'
+import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
 
 const SingUp = () => {
 

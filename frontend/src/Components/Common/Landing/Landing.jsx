@@ -1,6 +1,6 @@
 import styles from './Landing.module.css'
 
-import ButtonRoute from '../ButtonRoute/ButtonRoute'
+import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
 
 const Landing = () => {
 
