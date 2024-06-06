@@ -6,11 +6,13 @@
   /* Paleta de colores oscuro */
   --bg1: #1A1C2C;  /* Azul oscuro */
   --bg2: #181a1b;  /* Gris Oscuro */
-  --bg3: #191B24; /* Morado Oscuro */
-  --bg4: #212425;
-  --bg5: #595959;
-  --bg6: #979797;
-  --bg7: #2C1A2C;
+  --bg3: #191B24;  /* Morado Oscuro */
+  --bg4: #2C1A2C;  /*  */
+  
+  /* Colores de Error y demás */
+  --verde: #228B22;
+  --amarillo: #E6B0AA;
+  --azul: #2196F3;
 
   /* Color y tamaño de los deliniados inferiores */
 
