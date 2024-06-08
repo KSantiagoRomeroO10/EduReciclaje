@@ -10,7 +10,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 function App() {
 
   const location = useLocation()
-  const excludedRoutes = ['/', '/Login', '/SingUp', 'Pruebas']
+  const excludedRoutes = ['/', '/Login', '/SingUp']
 
   return (
     <>
