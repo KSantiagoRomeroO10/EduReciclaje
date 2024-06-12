@@ -1,0 +1,25 @@
+.Button{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  border: 0;
+  margin: 5px;
+}
+
+.Update{
+  background: var(--verde);
+}
+
+.Create{
+  position: absolute;
+  left: 0;
+  background: var(--azul);
+}
+
+.Delete{
+  background: var(--main);
+}
+
+.Default{
+  color: grey;
+}

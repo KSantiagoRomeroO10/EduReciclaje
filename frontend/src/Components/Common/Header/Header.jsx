@@ -19,7 +19,7 @@ const Header = () => {
             <li> <ButtonMenu NombreButton={'Publicaciones'} Route={'/Publications'}/> </li>
             <li> <ButtonMenu NombreButton={'Comentarios y opiniones'} Route={'/Coments&Opinions'}/> </li>
           </div>
-        </ul>      
+        </ul>
       </div>
 
       <div className={style.Centre}>

@@ -5,6 +5,8 @@ import Login from './Components/Common/Login/Login'
 import SingUp from './Components/Common/SingUp/SingUp'
 import Header from './Components/Common/Header/Header'
 
+import Read from './Components/CRUD/Read/Read'
+
 import { Routes, Route, useLocation } from 'react-router-dom'
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Route path='/' element={ <Landing/> }/>
         <Route path='/Login' element={ <Login/> }/>
         <Route path='/SingUp' element={ <SingUp/> }/>
+        <Route path='/Pruebas' element={ <Read/> }/>
       </Routes>
     </>
   )

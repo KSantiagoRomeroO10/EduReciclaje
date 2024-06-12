@@ -1,0 +1,28 @@
+.Table {
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+
+.Table th{
+  padding: 12px 0;
+  background: var(--main);
+  color: white;
+  min-width: 50px;
+}
+
+.Table td{
+  text-align: left;
+}
+
+.Table td, .Table th {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+.Table tr:nth-child(even){
+  background: var(--bg2);
+}
+
+.Table tr:hover {
+  background: #333333;
+}

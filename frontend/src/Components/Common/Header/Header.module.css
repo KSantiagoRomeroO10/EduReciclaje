@@ -1,10 +1,11 @@
 .Header{
-  width: 100vw;
+  width: 100%;
   height: auto;
   background-color: var(--bg2);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .ContainerMenu {
