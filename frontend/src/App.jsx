@@ -5,6 +5,7 @@ import Login from './Components/Common/Login/Login'
 import SignUp from './Components/Common/SignUp/SignUp'
 import Header from './Components/Common/Header/Header'
 import Read from './Components/CRUD/Read/Read'
+import ComentsOpinions from './Components/Common/ComentsOpinions/ComentsOpinions'
 
 import UseUserStore from './Stores/UseUserStore'
 import LoggedInUser from './Components/GlobalsValidations/LoggedInUser/LoggedInUser'
@@ -62,7 +63,7 @@ function App() {
           <Route path='/Quizzes' element={<Read />} />
           <Route path='/Evaluations' element={<Read />} />
           <Route path='/Publications' element={<Read />} />
-          <Route path='/Coments&Opinions' element={<Read />} />
+          <Route path='/ComentsOpinions' element={<ComentsOpinions />} />
           <Route path='/CrudForumsIndividuals' element={<Read />} />
           <Route path='/CrudPublicationsIndividuals' element={<Read />} />
           <Route path='/PrivateMessages' element={<Read />} />
