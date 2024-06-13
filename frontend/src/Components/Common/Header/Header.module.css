@@ -21,6 +21,7 @@
   left: 8px;
   background-color: var(--bg2);
   border-radius: 3px;
+  z-index: 1;
 }
 
 .Menu li {
@@ -49,4 +50,9 @@
 
 .Border{
   border: 2px solid white;
+}
+
+.Welcome{
+  margin-right: 15px;
+  text-decoration: none;
 }

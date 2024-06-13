@@ -1,18 +1,27 @@
-import style from './Header.module.css'
+import Style from './Header.module.css'
 
 import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
 import ButtonMenu from '../SubComponets/ButtonMenu/ButtonMenu'
 import Search from './Search/Search'
 
-const Header = () => {
-  return(
-    <header className={style.Header}>
+import LoggedInUser from '../../Validations/LoggedInUser/LoggedInUser'
+import UseUserStore from '../../../Stores/UseUserStore'
 
-      <div className={style.ContainerMenu}>
-        <p className={style.Trigger}>Explorar</p>
-        <ul className={style.Menu}>
-          <p className={style.Trigger}>Explorar</p>
-          <div className={style.Border}>
+import { NavLink } from 'react-router-dom'
+
+const Header = () => {  
+  
+  const user = UseUserStore((state) => state.user)
+  const IsUserValid = LoggedInUser()
+
+  return(
+    <header className={Style.Header}>
+
+      <div className={Style.ContainerMenu}>
+        <p className={Style.Trigger}>Explorar</p>
+        <ul className={Style.Menu}>
+          <p className={Style.Trigger}>Explorar</p>
+          <div className={Style.Border}>
             <li> <ButtonMenu NombreButton={'Foros'} Route={'/Forums'}/> </li>
             <li> <ButtonMenu NombreButton={'Quizzes'} Route={'/Quizzes'}/> </li>
             <li> <ButtonMenu NombreButton={'Evaluaciones'} Route={'/Evaluations'}/> </li>
@@ -22,14 +31,22 @@ const Header = () => {
         </ul>
       </div>
 
-      <div className={style.Centre}>
+      <div className={Style.Centre}>
         <Search/>
       </div>    
       
-      <div className={style.Right}>
-        <ButtonRoute NombreButton={'Iniciar Sesión'} Route={'/Login'} Right={true}/>
-        <ButtonRoute NombreButton={'Registrarse'} Route={'/SingUp'} Right={true}/>  
-      </div>
+      <div className={Style.Right}>
+      {
+        IsUserValid ? (
+          <NavLink to='Settings' className={Style.Welcome}>¡Bienvenido {user.user}!</NavLink>
+        ) : (
+          <>
+            <ButtonRoute NombreButton={'Iniciar Sesión'} Route={'/Login'} Right={true} />
+            <ButtonRoute NombreButton={'Registrarse'} Route={'/SignUp'} Right={true} />
+          </>
+        )
+      }
+    </div>
 
     </header>
   )

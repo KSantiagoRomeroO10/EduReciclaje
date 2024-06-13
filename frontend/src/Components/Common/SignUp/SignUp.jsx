@@ -1,9 +1,9 @@
 import styles from '../Styles/InputsForms.module.css'
-import styles1 from './SingUp.module.css'
+import styles1 from './SignUp.module.css'
 
 import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
 
-const SingUp = () => {
+const SignUp = () => {
 
   const HandleSubmit = () => {
 
@@ -68,4 +68,4 @@ const SingUp = () => {
   )
 }
 
-export default SingUp
+export default SignUp
