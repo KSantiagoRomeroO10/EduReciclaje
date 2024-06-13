@@ -4,7 +4,7 @@ import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
 import ButtonMenu from '../SubComponets/ButtonMenu/ButtonMenu'
 import Search from './Search/Search'
 
-import LoggedInUser from '../../Validations/LoggedInUser/LoggedInUser'
+import LoggedInUser from '../../GlobalsValidations/LoggedInUser/LoggedInUser'
 import UseUserStore from '../../../Stores/UseUserStore'
 
 import { NavLink } from 'react-router-dom'

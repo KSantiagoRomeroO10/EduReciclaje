@@ -7,7 +7,7 @@ import Header from './Components/Common/Header/Header'
 import Read from './Components/CRUD/Read/Read'
 
 import UseUserStore from './Stores/UseUserStore'
-import LoggedInUser from './Components/Validations/LoggedInUser/LoggedInUser'
+import LoggedInUser from './Components/GlobalsValidations/LoggedInUser/LoggedInUser'
 
 import { Routes, Route, useLocation } from 'react-router-dom'
 import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute'
