@@ -1,13 +1,13 @@
 .Table {
   border-collapse: collapse;
   margin: 50px auto;
+  max-width: 90vw;
 }
 
 .Table th{
   padding: 12px 0;
   background: var(--main);
   color: white;
-  min-width: 50px;
 }
 
 .Table td{

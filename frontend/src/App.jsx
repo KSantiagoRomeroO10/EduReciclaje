@@ -6,6 +6,8 @@ import SignUp from './Components/Common/SignUp/SignUp'
 import Header from './Components/Common/Header/Header'
 import Read from './Components/CRUD/Read/Read'
 import ComentsOpinions from './Components/Common/ComentsOpinions/ComentsOpinions'
+import CrudForumsIndividuals from './Components/Common/CrudForumsIndividuals/CrudForumsIndividuals'
+import CrudPublicationsIndividuals from './Components/Common/CrudPublicationsIndividuals/CrudPublicationsIndividuals'
 
 import UseUserStore from './Stores/UseUserStore'
 import LoggedInUser from './Components/GlobalsValidations/LoggedInUser/LoggedInUser'
@@ -64,8 +66,8 @@ function App() {
           <Route path='/Evaluations' element={<Read />} />
           <Route path='/Publications' element={<Read />} />
           <Route path='/ComentsOpinions' element={<ComentsOpinions />} />
-          <Route path='/CrudForumsIndividuals' element={<Read />} />
-          <Route path='/CrudPublicationsIndividuals' element={<Read />} />
+          <Route path='/CrudForumsIndividuals' element={<CrudForumsIndividuals />} />
+          <Route path='/CrudPublicationsIndividuals' element={<CrudPublicationsIndividuals />} />
           <Route path='/PrivateMessages' element={<Read />} />
           <Route path='/Settings' element={<Read />} />
         </Route>
