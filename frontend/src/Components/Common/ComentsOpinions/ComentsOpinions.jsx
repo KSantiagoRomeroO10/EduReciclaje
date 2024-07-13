@@ -14,7 +14,11 @@ const ComentsOpinions = () => {
           </p>
         </label>
         <br />
-        <textarea id="CO" name="CO" className={Styles.TextTarea}></textarea>
+        <textarea id="CO" name="CO" className={Styles.TextTarea}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nam voluptatum 
+          eum illo voluptas, earum necessitatibus velit adipisci asperiores? Non amet 
+          facere ab praesentium sunt numquam deleniti natus voluptas laborum.
+        </textarea>
         <br />
         <ButtonRoute  NombreButton={'Aceptar'} Route={'/Home'} />
       </form>

@@ -1,13 +1,16 @@
 import './General.css'
 
+import Header from './Components/Common/Header/Header'
+
 import Landing from './Components/Common/Landing/Landing'
 import Login from './Components/Common/Login/Login'
 import SignUp from './Components/Common/SignUp/SignUp'
-import Header from './Components/Common/Header/Header'
-import Read from './Components/CRUD/Read/Read'
+
 import ComentsOpinions from './Components/Common/ComentsOpinions/ComentsOpinions'
+
 import CrudForumsIndividuals from './Components/Common/CrudForumsIndividuals/CrudForumsIndividuals'
 import CrudPublicationsIndividuals from './Components/Common/CrudPublicationsIndividuals/CrudPublicationsIndividuals'
+import CrudPublications from './Components/Admin/CrudUsers/CrudUsers'
 
 import UseUserStore from './Stores/UseUserStore'
 import LoggedInUser from './Components/GlobalsValidations/LoggedInUser/LoggedInUser'
@@ -37,7 +40,7 @@ function App() {
       password: '654asd87f8',
       birthDate: '10/08/2000',
       location: 'Colombia, Bogotá',
-      role: 'Admin'
+      role: 'admin'
     }
     updateUser(user)
     setIsLoading(false)
@@ -55,34 +58,34 @@ function App() {
       <Routes>
         {/* Rutas publicas */}
         <Route path='/' element={<Landing />} />
-        <Route path='/Home' element={<Landing />} />
+        <Route path='/Home' />
         <Route path='/Login' element={<Login />} />
         <Route path='/SignUp' element={<SignUp />} />
         {/* Rutas Multiples protegidas */}
         {/* Everyone */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid} />}>
-          <Route path='/Forums' element={<Read />} />
-          <Route path='/Quizzes' element={<Read />} />
-          <Route path='/Evaluations' element={<Read />} />
-          <Route path='/Publications' element={<Read />} />
+          <Route path='/Forums' />
+          <Route path='/Quizzes' />
+          <Route path='/Evaluations' />
+          <Route path='/Publications' />
           <Route path='/ComentsOpinions' element={<ComentsOpinions />} />
           <Route path='/CrudForumsIndividuals' element={<CrudForumsIndividuals />} />
           <Route path='/CrudPublicationsIndividuals' element={<CrudPublicationsIndividuals />} />
-          <Route path='/PrivateMessages' element={<Read />} />
-          <Route path='/Settings' element={<Read />} />
+          <Route path='/PrivateMessages' />
+          <Route path='/Settings' />
         </Route>
         {/* Admin */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid && userLogin.role === 'Admin'} />}>
-          <Route path='/CrudUsers' element={<Read />} />
-          <Route path='/CrudForums' element={<Read />} />
-          <Route path='/CrudPublications' element={<Read />} />
-          <Route path='/Reports' element={<Read />} />
+          <Route path='/CrudUsers' element={<CrudPublications />} />
+          <Route path='/CrudForums' element={<CrudPublications />} /> {/* Crear Crud con datos pertinentes */}
+          <Route path='/CrudPublications' element={<CrudPublications />} /> {/* Crear Crud con datos pertinentes */}
+          <Route path='/Reports' />
         </Route>
         {/* Professor */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid && userLogin.role === 'Professor'} />}>
-          <Route path='/CrudGroupUsers' element={<Read />} />
-          <Route path='/CrudQuizzes' element={<Read />} />
-          <Route path='/CrudEvaluations' element={<Read />} />
+          <Route path='/CrudGroupUsers' element={<CrudPublications />} /> {/* Crear Crud con datos pertinentes */}
+          <Route path='/CrudQuizzes' element={<CrudPublications />} /> {/* Crear Crud con datos pertinentes */}
+          <Route path='/CrudEvaluations' element={<CrudPublications />} /> {/* Crear Crud con datos pertinentes */}
         </Route>
       </Routes>
     </>
