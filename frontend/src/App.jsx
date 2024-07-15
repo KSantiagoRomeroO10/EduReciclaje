@@ -2,6 +2,8 @@ import './General.css'
 
 import Header from './Components/Common/Header/Header'
 
+import Home from './Components/Common/Home/Home'
+
 import Landing from './Components/Common/Landing/Landing'
 import Login from './Components/Common/Login/Login'
 import SignUp from './Components/Common/SignUp/SignUp'
@@ -58,7 +60,7 @@ function App() {
       <Routes>
         {/* Rutas publicas */}
         <Route path='/' element={<Landing />} />
-        <Route path='/Home' />
+        <Route path='/Home' element={<Home/>}/>
         <Route path='/Login' element={<Login />} />
         <Route path='/SignUp' element={<SignUp />} />
         {/* Rutas Multiples protegidas */}

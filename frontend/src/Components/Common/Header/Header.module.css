@@ -1,51 +1,14 @@
 .Header{
   width: 100%;
-  height: auto;
-  background-color: var(--bg2);
+  background: var(--bg2);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
 
-.ContainerMenu {
-  position: relative;
-  padding: 10px;
-  max-width: 150px;
-}
-
-.Menu {
-  display: none;
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  background-color: var(--bg2);
-  border-radius: 3px;
-  z-index: 1;
-}
-
-.Menu li {
-  list-style: none;
-}
-
-.Trigger{
-  padding: 8px;
-  cursor: pointer;
-  background: var(--main);
-  border-radius: 3px;
-  margin: 10px;
-  border: 1px solid transparent;
-  width: 120px;
-}
-
-.Trigger:hover{
-  background: var(--bg1);
-  border: 1px solid white;
-}
-
-.Trigger:hover + .Menu,
-.Menu:hover {
-  display: block;
+.Header > * {
+  margin: 15px;
 }
 
 .Border{

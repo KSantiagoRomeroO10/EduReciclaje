@@ -1,0 +1,17 @@
+.Card{
+  max-width: 250px;
+  padding: 10px;
+  margin: 10px;
+  background: var(--bg2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Title{
+  font-size: 20px;
+}
+.User{
+  font-size: 16px;
+}
+.Img{
+  max-width: 200px;
+}
