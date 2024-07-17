@@ -16,7 +16,7 @@
 
   /* Color y tamaño de los deliniados inferiores */
 
-  --border-bottom: 2px solid var(--red)
+  --border-bottom: 2px solid var(--main);
 
 }
 
@@ -35,4 +35,8 @@
 
 body{
   background: var(--bg1);
+}
+
+#root{
+  overflow: hidden;
 }

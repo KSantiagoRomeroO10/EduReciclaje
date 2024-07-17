@@ -1,0 +1,47 @@
+.IconBars{
+  cursor: pointer;
+  padding: 2px;
+  margin: 0 0 0 10px;
+}
+
+.IconBarsOn{
+  margin: 3.4px 0 0 9.5px;
+}
+
+.List{
+  list-style: none;
+  background: var(--bg2);
+  padding: 15px;
+  max-width: max-content;
+  height: 100vh;
+}
+
+.DeploymentOff{
+  display: none;
+}
+
+.DeploymentOn{
+  display: block;
+  background: #000000c2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.DeploymentOn *{
+  text-align: left;
+}
+
+.List li {
+  margin: 25px;
+  padding: 15px;
+  width: 200px;
+  cursor: pointer;
+  border-bottom: 2px solid white;
+}
+
+.List li:hover{
+  border-bottom: var(--border-bottom);
+}

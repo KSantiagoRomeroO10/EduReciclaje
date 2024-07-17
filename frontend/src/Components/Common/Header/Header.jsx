@@ -6,6 +6,8 @@ import Search from './Search/Search'
 import LoggedInUser from '../../GlobalsValidations/LoggedInUser/LoggedInUser'
 import UseUserStore from '../../../Stores/UseUserStore'
 
+import Menu from './Menu/Menu'
+
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {  
@@ -17,7 +19,7 @@ const Header = () => {
     <header className={Style.Header}>
 
       <div className={Style.Left}>
-        EduReciclaje
+        <Menu/>
       </div>
 
       <div className={Style.Centre}>
