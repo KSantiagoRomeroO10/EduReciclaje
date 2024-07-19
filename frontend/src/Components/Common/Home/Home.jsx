@@ -24,7 +24,7 @@ const Home = () => {
     {
       title: 'Comentarios y opiniones',
       description: 'Santiago',
-      route: '/Coments&Opinions'
+      route: '/ComentsOpinions'
     }
   ]
   return(

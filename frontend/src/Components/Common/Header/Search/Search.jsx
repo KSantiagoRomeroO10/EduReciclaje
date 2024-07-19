@@ -8,7 +8,9 @@ const Search = () => {
   return(
     <div className={Styles.Container}>
       <input type="text" placeholder='Buscar' className={`${Styles1.Input} ${Styles.Input}`} id='SearchInput'/>
-      <button className={Styles.SearchButton}> <IconSearch Color={'white'}/> </button>
+      <button className={Styles.SearchButton}> 
+        <IconSearch/> 
+      </button>
     </div>
   )
 }

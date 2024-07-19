@@ -37,6 +37,3 @@ body{
   background: var(--bg1);
 }
 
-#root{
-  overflow: hidden;
-}

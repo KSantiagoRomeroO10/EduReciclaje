@@ -17,6 +17,8 @@ import CrudPublications from './Components/Admin/CrudUsers/CrudUsers'
 import UseUserStore from './Stores/UseUserStore'
 import LoggedInUser from './Components/GlobalsValidations/LoggedInUser/LoggedInUser'
 
+import Chat from './Components/Common/Chat/Chat'
+
 import { Routes, Route, useLocation } from 'react-router-dom'
 import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute'
 
@@ -42,7 +44,7 @@ function App() {
       password: '654asd87f8',
       birthDate: '10/08/2000',
       location: 'Colombia, Bogotá',
-      role: 'admin'
+      role: 'Admin'
     }
     updateUser(user)
     setIsLoading(false)
@@ -75,6 +77,7 @@ function App() {
           <Route path='/CrudPublicationsIndividuals' element={<CrudPublicationsIndividuals />} />
           <Route path='/PrivateMessages' />
           <Route path='/Settings' />
+          <Route path='/Chat' element={<Chat />}/>
         </Route>
         {/* Admin */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid && userLogin.role === 'Admin'} />}>

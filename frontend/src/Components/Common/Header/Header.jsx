@@ -29,7 +29,7 @@ const Header = () => {
       <div className={Style.Right}>
       {
         IsUserValid ? (
-          <NavLink to='Settings' className={Style.Welcome}>¡Bienvenido {user.user}!</NavLink>
+          <NavLink to='/Home' className={Style.Welcome}>¡Bienvenido {user.user}!</NavLink>
         ) : (
           <>
             <ButtonRoute NombreButton={'Iniciar Sesión'} Route={'/Login'} Right={true} />

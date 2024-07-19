@@ -13,7 +13,7 @@
   background: var(--bg2);
   padding: 15px;
   max-width: max-content;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .DeploymentOff{
@@ -28,13 +28,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 2;
 }
 
 .DeploymentOn *{
   text-align: left;
 }
 
-.List li {
+.List li{
   margin: 25px;
   padding: 15px;
   width: 200px;
@@ -44,4 +45,26 @@
 
 .List li:hover{
   border-bottom: var(--border-bottom);
+}
+
+details summary{
+  list-style: none;
+  cursor: pointer;
+}
+
+details{
+  cursor: auto;
+}
+
+.Drop{
+  padding: 0;
+  margin: 0;
+}
+
+.Drop li{
+  width: 125px;
+}
+
+.NavLink{
+  text-decoration: none;
 }
