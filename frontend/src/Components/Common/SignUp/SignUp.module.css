@@ -5,3 +5,20 @@
   display: grid;
   grid-template-columns: auto auto;
 }
+
+.LabelInput{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media(max-width: 1200px){
+  .Container{
+    display: block;
+  }
+  .Form{
+    position: static;
+    transform: translate(0, 0);
+    margin: 30px auto;
+  }  
+}

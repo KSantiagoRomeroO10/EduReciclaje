@@ -72,12 +72,10 @@ function App() {
           <Route path='/Quizzes' />
           <Route path='/Evaluations' />
           <Route path='/Publications' />
+          <Route path='/PrivateMessages' element={<Chat />}/>
           <Route path='/ComentsOpinions' element={<ComentsOpinions />} />
           <Route path='/CrudForumsIndividuals' element={<CrudForumsIndividuals />} />
           <Route path='/CrudPublicationsIndividuals' element={<CrudPublicationsIndividuals />} />
-          <Route path='/PrivateMessages' />
-          <Route path='/Settings' />
-          <Route path='/Chat' element={<Chat />}/>
         </Route>
         {/* Admin */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid && userLogin.role === 'Admin'} />}>

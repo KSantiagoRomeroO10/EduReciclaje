@@ -1,18 +1,32 @@
-.SearchButton{
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchButton {
   background: var(--main);
   border-radius: 0 3px 3px 0;
   border: none;
   cursor: pointer;
   border: 1px solid white;
-  padding: 8px 12px;
+  padding: 10.5px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: background 0.3s ease; */
 }
-.SearchButton:hover{
+
+.SearchButton:hover {
   background: var(--bg1);
   border: 1px solid white;
 }
 
-.Input{
+.Input {
   max-width: 200px;
   border-radius: 3px 0 0 3px;
   text-align: left;
+  padding: 8px;
+  border: 1px solid white;
+  outline: none;
 }

@@ -11,12 +11,10 @@
 
 .InputContainer{
   --c-text: rgb(252, 252, 252);
-  --c-outline: var(--bg2);
+  --c-outline: var(--main);
   margin: 40px auto;
-  display: grid;
-  gap: 8px;
   position: relative;
-  width: 200px;
+  width: 50%;
 }
 
 .InputContainer input{
