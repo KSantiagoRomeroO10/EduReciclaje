@@ -2,7 +2,6 @@ import { create } from 'zustand'
 
 const UseUserStore = create((set) => ({
   user:{
-    
     user: null,
     names: null,
     lastNames: null,

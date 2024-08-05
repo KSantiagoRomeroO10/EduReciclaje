@@ -24,6 +24,8 @@ import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute'
 
 import { useEffect, useState } from 'react'
 
+import Assistants from './Apis/OpenAI/Assistants'
+
 function App() {
   const location = useLocation()
   const excludedRoutes = ['/', '/Login', '/SignUp']
@@ -65,6 +67,7 @@ function App() {
         <Route path='/Home' element={<Home/>}/>
         <Route path='/Login' element={<Login />} />
         <Route path='/SignUp' element={<SignUp />} />
+        <Route path='/Pruebas' element={<Assistants/>}/>
         {/* Rutas Multiples protegidas */}
         {/* Everyone */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid} />}>
