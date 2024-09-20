@@ -24,11 +24,11 @@ import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute'
 
 import { useEffect, useState } from 'react'
 
-import Assistants from './Apis/OpenAI/Assistants'
+// import Assistants from './Apis/OpenAI/Assistants'
 
 function App() {
   const location = useLocation()
-  const excludedRoutes = ['/', '/Login', '/SignUp']
+  const excludedRoutes = ['/', '/Login', '/SingUp']
 
   const userLogin = UseUserStore((state) => state.user)
   const updateUser = UseUserStore((state) => state.updateUser)
@@ -46,7 +46,7 @@ function App() {
       password: '654asd87f8',
       birthDate: '10/08/2000',
       location: 'Colombia, Bogotá',
-      role: 'Admin'
+      role: null
     }
     updateUser(user)
     setIsLoading(false)
@@ -66,8 +66,8 @@ function App() {
         <Route path='/' element={<Landing />} />
         <Route path='/Home' element={<Home/>}/>
         <Route path='/Login' element={<Login />} />
-        <Route path='/SignUp' element={<SignUp />} />
-        <Route path='/Pruebas' element={<Assistants/>}/>
+        <Route path='/SingUp' element={<SignUp />} />
+        {/* <Route path='/Pruebas' element={<Assistants/>}/> */}
         {/* Rutas Multiples protegidas */}
         {/* Everyone */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid} />}>

@@ -3,6 +3,8 @@ import Styles1 from './SignUp.module.css'
 
 import ButtonRoute from '../SubComponets/ButtonRoute/ButtonRoute'
 
+import { NavLink } from 'react-router-dom'
+
 const SignUp = () => {
 
   const HandleSubmit = () => {
@@ -60,9 +62,13 @@ const SignUp = () => {
           </div>
 
         </div>
+        
       </div>      
 
       <ButtonRoute NombreButton={'Aceptar'} Route={'/Login'}/>
+      <NavLink to={'/SingUp'}>
+        <p>Login</p>
+      </NavLink>
 
     </form>
   )

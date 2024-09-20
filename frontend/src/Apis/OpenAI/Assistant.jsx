@@ -32,7 +32,7 @@ const Assistants = () => {
         await CreateRuns(idThread, idEduReciclaje)
 
         const response = await ListMessages(idThread)
-        //setResponseEduReciclaje(response)
+        setResponseEduReciclaje(response)
       } 
       catch (error) {
         console.error('Error:', error)
