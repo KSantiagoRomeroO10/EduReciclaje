@@ -46,7 +46,7 @@ function App() {
       password: '654asd87f8',
       birthDate: '10/08/2000',
       location: 'Colombia, Bogotá',
-      role: null
+      role: 'Admin'
     }
     updateUser(user)
     setIsLoading(false)

@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "scripts": {
+    "start": "node --env-file .env --watch Server.js"
+  },
+  "keywords": ["Reciclaje"],
+  "author": "Santiago Romero",
+  "license": "",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.7",
+    "sequelize": "^6.37.3"
+  }
+}
