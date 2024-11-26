@@ -11,17 +11,18 @@ const CreateUser = async (req, res) => {
   }
 }
 
-const GetUsers = async (req, res) => {
+const GetAllUsers = async (req, res) => {
   try {
     const Users = await User.findAll()
-    res.status(200).json(Users)
+    if(Users) res.status(200).json({Users})
+    else res.status(404).json({'Not Found': 'No hay usuarios en la base de datos'})
   } 
   catch (error) {
     res.status(500).json({ error: error.message })
   }
 }
 
-const GetUserByUser = async (req, res) => {
+const GetOneUser = async (req, res) => {
   try {
     const { user, password } = req.body
 
@@ -33,27 +34,29 @@ const GetUserByUser = async (req, res) => {
         password
       }
     })
-    res.status(200).json(FindUser)
+
+    if(FindUser) res.status(200).json({FindUser})
+    else res.status(404).json({'Not found': `Usuario ${user} no econtrado`})
   } 
   catch (error) {
     res.status(500).json({ error: error.message })
   }
 }
 
-const DeleteByIdUser = (req, res) => {
+const DeleteByIdUser = async (req, res) => {
   try {
     const { idUser } = req.body
 
     if(!idUser) return res.status(400).json({ error: 'Falta el campo idUser' })
 
-    const DeleteUser = User.destroy({ where: idUser })
+    const DeleteUser = await User.destroy({ where: { idUser } })
 
     if(DeleteUser) res.status(200).json({ message: 'Usuario eliminado con éxito' })
-    else res.status(404).json({ error: `Usuario con el id ${idUser} no encontrado` })
+    else res.status(404).json({ 'Not Found': `Usuario con el id ${idUser} no encontrado` })
   } 
   catch (error) {
     res.status(500).json({ error: error.message })
   }
 }
 
-module.exports = { CreateUser, GetUsers, GetUserByUser, DeleteByIdUser }
+module.exports = { CreateUser, GetAllUsers, GetOneUser, DeleteByIdUser }
