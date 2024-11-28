@@ -1,10 +1,17 @@
 const User = require('../Models/User')
+const { CreateUserService } = require('../Service/UserService')
 
 const CreateUser = async (req, res) => {
   try {
-    const { user, names, lastnames, email, number_phone, password, date_birth, location, rol } = req.body
-    const newUser = await User.create({ user, names, lastnames, email, number_phone, password, date_birth, location, rol })
-    res.status(201).json({newUser})
+    const validateUser = CreateUserService(req.body)
+    
+    if(validateUser){
+      const newUser = await User.create({...validateUser})
+      res.status(201).json({newUser})
+    }
+    else{
+      res.status(400).json({"Error": "Datos invalidos del usuario."})
+    }
   } 
   catch (error) {
     res.status(500).json({ error: error.message })
@@ -23,11 +30,11 @@ const GetAllUsers = async (req, res) => {
 }
 
 const GetOneUser = async (req, res) => {
-  try {
+  try { 
     const { user, password } = req.body
 
     if(!user || !password) return res.status(400).json({error: 'Faltan los campos "user" o "password".'})
-
+    
     const FindUser = await User.findOne({
       where: {
         user,

@@ -38,12 +38,10 @@ Server.use(Routes)
 
 const Port = 3001
 
-const startServer = async () => {
-  Server.listen(Port, async () => {
-    await CreatedDB()
-    await CreateTables()
-    console.log(`Servidor escuchando en el puerto ${Port}.`)
-  })
-}
+const StartServer = Server.listen(Port, async () => {
+  await CreatedDB()
+  await CreateTables()
+  console.log(`Servidor escuchando en el puerto ${Port}.`)
+})
 
-startServer()
+module.exports = { Server, StartServer } 

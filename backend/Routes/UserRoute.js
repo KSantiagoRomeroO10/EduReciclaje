@@ -5,7 +5,7 @@ const { CreateUser, GetAllUsers, GetOneUser, DeleteByIdUser } = require('../Cont
 
 UserRoute.post('/new', CreateUser)
 UserRoute.get('/getAll', GetAllUsers)
-UserRoute.get('/getOne', GetOneUser)
+UserRoute.post('/getOne', GetOneUser)
 UserRoute.delete('/delete', DeleteByIdUser)
 
 module.exports = UserRoute
