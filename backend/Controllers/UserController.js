@@ -34,7 +34,7 @@ const GetOneUser = async (req, res) => {
     const { user, password } = req.body
 
     if(!user || !password) return res.status(400).json({error: 'Faltan los campos "user" o "password".'})
-    
+
     const FindUser = await User.findOne({
       where: {
         user,

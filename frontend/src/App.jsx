@@ -37,18 +37,18 @@ function App() {
   const IsUserValid = LoggedInUser()
 
   useEffect(() => {
-    const user = {
-      user: 'Santiago',
-      names: 'Kevin Santiago',
-      lastNames: 'Romero Osorio',
-      email: 'KSantiagoRomeroO10@outlook.com',
-      phone: 3053770449,
-      password: '654asd87f8',
-      birthDate: '10/08/2000',
-      location: 'Colombia, Bogotá',
-      role: 'Admin'
-    }
-    updateUser(user)
+    // const user = {
+    //   user: 'Santiago',
+    //   names: 'Kevin Santiago',
+    //   lastNames: 'Romero Osorio',
+    //   email: 'KSantiagoRomeroO10@outlook.com',
+    //   phone: 3053770449,
+    //   password: '654asd87f8',
+    //   birthDate: '10/08/2000',
+    //   location: 'Colombia, Bogotá',
+    //   // role: 'Admin'
+    // }
+    // updateUser(user)
     setIsLoading(false)
   }, [updateUser])
 

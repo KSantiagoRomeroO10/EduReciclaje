@@ -1,27 +1,35 @@
 import Styles from './Menu.module.css'
-
 import IconBars from '../../../../Assets/Icons/IconBars'
 
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+
+import UseUserStore from '../../../../Stores/UseUserStore'
 
 const Menu = () => {
-
   const [Deployment, SetDeployment] = useState(false)
+  const updateUser = UseUserStore((state) => state.resetUser)
+  
+  const navigate = useNavigate() // Hook para redirigir
 
   const handleClick = () => {
     SetDeployment(!Deployment)
   }
 
-  return(
+  const handleLogout = () => {
+    updateUser()
+    navigate('/Login')
+  }
+
+  return (
     <>
       <div className={Styles.IconBars} onClick={() => handleClick()}>
-        <IconBars/>
+        <IconBars />
       </div>
       <div className={`${Deployment ? Styles.DeploymentOn : Styles.DeploymentOff}`}>
         <ul className={Styles.List}>
           <div className={`${Styles.IconBars} ${Styles.IconBarsOn}`} onClick={() => handleClick()}>
-            <IconBars/>
+            <IconBars />
           </div>
           <li className='DropDetails'>
             <details className={Styles.Drop}>
@@ -33,18 +41,18 @@ const Menu = () => {
 
               <NavLink to='/CrudPublicationsIndividuals' className={Styles.NavLink}>
                 <li>Crud de publicaciones personal</li>
-              </NavLink>    
+              </NavLink>
 
               <NavLink to='/CrudUsers' className={Styles.NavLink}>
-                <li>Crud de usuarios</li> 
-              </NavLink>  
+                <li>Crud de usuarios</li>
+              </NavLink>
 
               <NavLink to='/CrudForums' className={Styles.NavLink}>
-                <li>Crud de foros general</li>  
-              </NavLink> 
-                          
+                <li>Crud de foros general</li>
+              </NavLink>
+
               <NavLink to='/CrudPublications' className={Styles.NavLink}>
-                <li>Crud de publicaciones general</li>  
+                <li>Crud de publicaciones general</li>
               </NavLink>
             </details>
           </li>
@@ -57,7 +65,10 @@ const Menu = () => {
             <li>Reportes</li>
           </NavLink>
 
-          <li>Cerrar Sesión</li>
+          {/* Aquí agregas la opción para cerrar sesión */}
+          <li onClick={handleLogout} className={Styles.NavLink}>
+            Cerrar Sesión
+          </li>
 
         </ul>
       </div>
