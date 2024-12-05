@@ -71,10 +71,10 @@ function App() {
         {/* Rutas Multiples protegidas */}
         {/* Everyone */}
         <Route element={<ProtectedRoute IsAllowed={IsUserValid} />}>
-          <Route path='/Forums' />
-          <Route path='/Quizzes' />
-          <Route path='/Evaluations' />
-          <Route path='/Publications' />
+          <Route path='/Forums' element={<CrudForumsIndividuals />} />
+          <Route path='/Quizzes' element={<CrudForumsIndividuals />} />
+          <Route path='/Evaluations' element={<CrudForumsIndividuals />} />
+          <Route path='/Publications' element={<CrudForumsIndividuals />} />
           <Route path='/PrivateMessages' element={<Chat />}/>
           <Route path='/ComentsOpinions' element={<ComentsOpinions />} />
           <Route path='/CrudForumsIndividuals' element={<CrudForumsIndividuals />} />
